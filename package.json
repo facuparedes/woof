@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "api": "file:api",
+    "client": "file:client"
+  }
+}
