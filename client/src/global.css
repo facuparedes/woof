@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a:focus,
+button:focus,
+input:focus,
+:focus {
+  outline: none;
+}
+
+h1,
+span,
+p,
+a,
+button,
+input,
+input::placeholder,
+textarea {
+  text-decoration: none;
+  font-family: var(--font-inter);
+  color: rgb(var(--colors-text));
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  overflow-y: scroll;
+  background-color: var(--colors-bg);
+  font-family: var(--font-inter);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+:root {
+  --colors-bg: #fdf2ea /*rgba(var(--colors-primary), 0.05)*/ /*#fffcf9*/;
+  --colors-primary: 238, 122, 49 /*#ee7a31  */;
+  --colors-secondary: white;
+  --colors-text: 17, 19, 52 /*#111334*/;
+  --font-inter: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --mx-container: 0 var(--ml-container) 0 var(--mr-container);
+  --ml-container: 8rem;
+  --mr-container: 8rem;
+  --p-pill: 0.2rem 0.6rem 0.2rem 0.6rem;
+  --h-navbar: 64px;
+  --text-90: 5.6rem;
+  --px-20: 1.2rem;
+  --px-40: 2.4rem;
+  --rounded-20: 1.25rem;
+  --gap-20: 1.25rem;
+}
+
+@media screen and (max-width: 1536px) {
+  :root {
+    --mx-container: 0 2rem 0 2rem;
+    --text-90: 5rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --text-90: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --text-90: 3.6rem;
+    --px-20: 1rem;
+    --px-40: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --text-90: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  :root {
+    --mx-container: 0 0.5rem 0 0.5rem;
+  }
+}

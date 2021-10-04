@@ -1,4 +1,3 @@
-const cookieParser = require("cookie-parser");
 const morgan = require("morgan");
 const express = require("express");
 const routes = require("./routes");
@@ -9,7 +8,6 @@ app.name = "API";
 app
   .use(express.urlencoded({ extended: true, limit: "50mb" }))
   .use(express.json({ limit: "50mb" }))
-  .use(cookieParser())
   .use(morgan("dev"))
   .use((_, res, next) => {
     res
@@ -21,10 +19,11 @@ app
   })
   .use("/", routes)
   .use((err, _, res, __) => {
+    // Error catching endware.
     const { status = 500, message: error = err } = err;
 
     console.error(err);
-    res.status(status).json({ error }); // Error catching endware.
+    res.status(status).json({ error });
   });
 
 module.exports = app;

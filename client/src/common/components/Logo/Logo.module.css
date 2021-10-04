@@ -1,0 +1,22 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container__img {
+  height: 100%;
+  width: 100%;
+  min-height: 0;
+  padding: 2px 0 2px 0;
+  object-fit: contain;
+  filter: invert(5%) sepia(34%) saturate(6025%) hue-rotate(233deg) brightness(100%) contrast(96%);
+  -webkit-filter: invert(5%) sepia(34%) saturate(6025%) hue-rotate(233deg) brightness(100%) contrast(96%);
+}
+
+.container__title {
+  font-size: 14px;
+  font-weight: 600;
+}
