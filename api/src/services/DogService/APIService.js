@@ -27,7 +27,7 @@ class APIService {
       .then((res) => res.data)
       .then((data) =>
         data.map(({ id, name, temperament, image, weight, height, life_span }) => {
-          const parsedTemperament = temperament?.split(", ") ?? [];
+          const parsedTemperament = temperament?.split(", ").sort() ?? [];
           const parsedImage = { id: image.id, url: image.url };
           const [averageWeight, averageHeight, averageLifeSpan] = [this.__calcAverageFromString(weight.metric), this.__calcAverageFromString(height.metric), this.__calcAverageFromString(life_span)];
           const parsedData = { id, name, temperaments: parsedTemperament, image: parsedImage, weight: averageWeight, height: averageHeight, life_span: averageLifeSpan };
@@ -50,7 +50,7 @@ class APIService {
    * @returns {Promise<Array<string>>}
    */
   static async getAllTemperaments() {
-    return this.__getAllData(({ temperaments }) => temperaments).then((temperaments) => [...new Set(temperaments.flat())].sort());
+    return this.__getAllData(({ temperaments }) => temperaments).then((temperaments) => [...new Set(temperaments.flat())]);
   }
 
   /**

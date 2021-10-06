@@ -1,0 +1,54 @@
+.container {
+  display: flex;
+  align-items: baseline;
+  column-gap: calc(var(--gap-20) / 2);
+  grid-column: 1/-1;
+  /* align-self: center; */
+  justify-self: center;
+  font-size: 1rem;
+  color: rgb(var(--colors-text), 0.5);
+  margin: calc(var(--gap-20) * 2) 0;
+}
+
+.container__button {
+  font-size: inherit;
+  width: 2.6rem;
+  height: 2.6rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+  border-radius: calc(var(--rounded-20) - 0.6rem);
+  -webkit-border-radius: calc(var(--rounded-20) - 0.6rem);
+  -moz-border-radius: calc(var(--rounded-20) - 0.6rem);
+  -ms-border-radius: calc(var(--rounded-20) - 0.6rem);
+  -o-border-radius: calc(var(--rounded-20) - 0.6rem);
+  transition: color 0.2s, background-color 0.2s;
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  -moz-transition: color 0.2s, background-color 0.2s;
+  -ms-transition: color 0.2s, background-color 0.2s;
+  -o-transition: color 0.2s, background-color 0.2s;
+}
+
+.container__button:hover {
+  background-color: rgba(var(--colors-text), 0.05);
+}
+
+.container__button:active {
+  background-color: rgba(var(--colors-text), 1);
+  color: var(--colors-secondary);
+}
+
+.container__dots {
+  color: inherit;
+}
+
+.container__button_active {
+  background-color: rgba(var(--colors-text), 1);
+  color: var(--colors-secondary);
+}
+
+.container__button_active:hover {
+  background-color: rgba(var(--colors-text), 1);
+  color: var(--colors-secondary);
+}
