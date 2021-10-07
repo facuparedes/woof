@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
-import s from "./Navbar.module.css";
 import Logo from "../Logo";
+import Searchbar from "../Searchbar";
+import s from "./Navbar.module.css";
 
 export default function Navbar() {
   return (
     <nav className={s.container}>
       <Link className={s.container__logo} to="/" children={<Logo />} />
-      <input className={s.container__searchBar} type="search" name="SearchBreed" placeholder="Search breed" />
+      <Searchbar />
     </nav>
   );
 }

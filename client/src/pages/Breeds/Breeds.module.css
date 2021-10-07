@@ -4,13 +4,3 @@
   flex-grow: 1;
   background-color: rgba(var(--colors-text), 0.05);
 }
-
-.container__list {
-  width: 100%;
-  height: 100%;
-  padding: calc(var(--ml-container) / 3);
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  grid-template-rows: repeat(auto-fill, 600px);
-  gap: var(--gap-20);
-}

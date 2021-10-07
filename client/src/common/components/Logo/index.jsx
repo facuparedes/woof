@@ -1,5 +1,5 @@
-import s from "./Logo.module.css";
 import logo from "../../../assets/logo.svg";
+import s from "./Logo.module.css";
 
 export default function Logo() {
   return (

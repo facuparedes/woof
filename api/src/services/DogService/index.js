@@ -11,7 +11,9 @@ class DogService {
   }
 
   static async getBreedByName(breedName) {
-    return Promise.all([APIService.getBreedByName(breedName), DBService.getBreedByName(breedName)]).then((breeds) => breeds.flat().sort((a, b) => a.name?.localeCompare(b.name) ?? 0));
+    return Promise.all([APIService.getBreedByName(breedName), DBService.getBreedByName(breedName)])
+      .then((breeds) => breeds.flat().sort((a, b) => a.name?.localeCompare(b.name) ?? 0))
+      .then((breeds) => breeds.map((breed) => breed.id));
   }
 
   static async getBreedById(id) {

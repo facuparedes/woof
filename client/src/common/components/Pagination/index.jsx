@@ -1,31 +1,26 @@
-import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { setPaginationIndex } from "../../redux/actions";
 import BackNextButton from "./BackNextButton";
 import s from "./Pagination.module.css";
 
-export default function Pagination({ pagesQuantity }) {
+export default function Pagination({ pagesQuantity, currentPage }) {
   const [paginationOffset, setPaginationOffset] = useState(0);
   const dispatch = useDispatch();
-  const currentPage = useSelector((state) => state["breeds"].pagination);
   const maxButtonsPerPage = 9;
   const buttons = [...new Array(Math.min(pagesQuantity, maxButtonsPerPage))].map((_, i) => i + 1 + paginationOffset);
 
-  function __handlePaginationChange(toPage) {
-    if (toPage === currentPage) {
-      return;
-    } else if (toPage === 1) {
-      setPaginationOffset(0);
-    } else if (pagesQuantity > maxButtonsPerPage && pagesQuantity === toPage) {
-      setPaginationOffset(pagesQuantity - maxButtonsPerPage);
-    } else if (buttons.at(-1) === toPage) {
-      if (pagesQuantity - toPage > 0) setPaginationOffset(paginationOffset + Math.min(pagesQuantity - toPage, Math.floor(buttons.length / 2)));
-    } else if (buttons.at(0) === toPage) {
-      if (toPage > 1) setPaginationOffset(paginationOffset - Math.min(toPage - 1, Math.floor(buttons.length / 2)));
-    }
+  useEffect(() => setPaginationOffset(0), [pagesQuantity]);
+
+  const __handlePaginationChange = (toPage) => {
+    if (toPage === currentPage || toPage < 1 || toPage > pagesQuantity) return;
+    if (toPage === 1) setPaginationOffset(0);
+    if (toPage === pagesQuantity && pagesQuantity > maxButtonsPerPage) setPaginationOffset(pagesQuantity - maxButtonsPerPage);
+    if (toPage === buttons.at(-1)) setPaginationOffset(paginationOffset + Math.min(pagesQuantity - toPage, Math.floor(buttons.length / 2)));
+    if (toPage === buttons.at(0)) setPaginationOffset(paginationOffset - Math.min(toPage - 1, Math.floor(buttons.length / 2)));
 
     dispatch(setPaginationIndex(toPage));
-  }
+  };
 
   return (
     <div className={s.container}>

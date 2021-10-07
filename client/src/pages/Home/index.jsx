@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import s from "./Home.module.css";
 import dogImage from "../../assets/homeDog.jpg";
+import s from "./Home.module.css";
 
 export default function Home() {
   return (
