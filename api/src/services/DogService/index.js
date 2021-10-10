@@ -10,6 +10,15 @@ class DogService {
     return Promise.all([APIService.getAllBreeds(), DBService.getAllBreeds()]).then((breeds) => breeds.flat().sort((a, b) => a.name?.localeCompare(b.name) ?? 0));
   }
 
+  static async getRandomBreeds() {
+    return Promise.all([APIService.getAllBreeds(), DBService.getAllBreeds()]).then((breeds) =>
+      breeds
+        .flat()
+        .sort(() => Math.random() - 0.5)
+        .slice(0, 16)
+    );
+  }
+
   static async getBreedByName(breedName) {
     return Promise.all([APIService.getBreedByName(breedName), DBService.getBreedByName(breedName)])
       .then((breeds) => breeds.flat().sort((a, b) => a.name?.localeCompare(b.name) ?? 0))

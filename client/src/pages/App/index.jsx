@@ -1,6 +1,7 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Navbar from "../../common/components/Navbar";
 import Breeds from "../Breeds";
+import BreedDetails from "../BreedDetails";
 import Home from "../Home";
 
 function App() {
@@ -10,9 +11,7 @@ function App() {
       <Switch>
         <Route exact path="/" children={<Home />} />
         <Route exact path="/breeds" children={<Breeds />} />
-        <Route exact path="/breeds/:breed">
-          Breed details
-        </Route>
+        <Route exact path="/breeds/:id" children={<BreedDetails />} />
         <Route exact path="/create/breed">
           Create breed form
         </Route>

@@ -33,7 +33,6 @@ export default function Sidebar() {
 
   return (
     <aside className={s.container}>
-      <h2>All breeds</h2>
       <FilterSection title="Temperament" dataToMap={temperaments} checked={(i) => !!checkedValues.temperaments[i]} onChange={(id, name) => handleChecked(id, name, "temperaments")} />
       <FilterSection title="Breed" dataToMap={breeds} checked={(i) => activeBreedsFilter[i] || !!checkedValues.breeds[i]} onChange={(id, name) => handleChecked(id, name, "breeds")} />
     </aside>

@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  margin: 5px 0px;
+  column-gap: 5px;
+  opacity: 60%;
+}
+
+.container__img {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  align-self: center;
+  opacity: 60%;
+  fill: rgb(var(--colors-text));
+}

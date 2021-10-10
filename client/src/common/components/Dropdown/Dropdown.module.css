@@ -1,0 +1,89 @@
+.container {
+  position: relative;
+}
+
+.container__mainButton {
+  padding: calc(var(--px-20) / 10) calc(var(--px-20) / 2);
+  background: none;
+  cursor: pointer;
+  border: none;
+  border-radius: calc(var(--rounded-20) / 4);
+  -webkit-border-radius: calc(var(--rounded-20) / 4);
+  -moz-border-radius: calc(var(--rounded-20) / 4);
+  -ms-border-radius: calc(var(--rounded-20) / 4);
+  -o-border-radius: calc(var(--rounded-20) / 4);
+  font-size: inherit;
+}
+
+.container__mainButton__label svg {
+  display: inline-block;
+  height: 1rem;
+  width: 1rem;
+  vertical-align: middle;
+  fill: rgb(var(--colors-primary));
+}
+
+.container__dropdown {
+  width: max-content;
+  position: absolute;
+  z-index: 2;
+  left: 100%;
+  background-color: var(--colors-secondary);
+  box-shadow: 0px 4px 8px 1px rgba(var(--colors-text), 0.1);
+  border-radius: calc(var(--rounded-20) / 4);
+  -webkit-border-radius: calc(var(--rounded-20) / 4);
+  -moz-border-radius: calc(var(--rounded-20) / 4);
+  -ms-border-radius: calc(var(--rounded-20) / 4);
+  -o-border-radius: calc(var(--rounded-20) / 4);
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+
+.container__dropdown button {
+  width: 100%;
+  display: block;
+  padding: 0.8rem 0.8rem;
+  text-align: start;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+
+.container__dropdown button:hover {
+  background-color: rgba(var(--colors-text), 0.05);
+}
+
+.container__dropdown button::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  vertical-align: middle;
+  margin-right: 0.8rem;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.container__dropdown button:hover:before {
+  background-color: rgba(var(--colors-primary), 0.5);
+}
+
+.container__dropdown_active:before {
+  background-color: rgb(var(--colors-primary));
+}
+
+.container__dropdown_active:hover:before {
+  background-color: rgb(var(--colors-primary)) !important;
+}

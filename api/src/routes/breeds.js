@@ -20,6 +20,12 @@ router
   .get("/:id", (req, res, next) => {
     const { id } = req.params;
 
+    if (id === "randoms") {
+      return DogService.getRandomBreeds()
+        .then((parsedData) => res.json(parsedData))
+        .catch((err) => next(err));
+    }
+
     DogService.getBreedById(id)
       .then((parsedData) => res.json(parsedData))
       .catch((err) => next(err));

@@ -5,12 +5,6 @@
   background-color: var(--colors-bg);
   padding: calc(var(--ml-container) / 3);
 }
-
-.container h2 {
-  font-size: 40px;
-  font-weight: 600;
-}
-
 .container h3 {
   font-size: 18px;
   font-weight: 600;

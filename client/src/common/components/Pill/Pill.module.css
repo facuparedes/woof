@@ -1,0 +1,10 @@
+.container {
+  padding: var(--p-pill);
+  color: rgb(var(--colors-primary));
+  border: solid 1px rgb(var(--colors-primary));
+  border-radius: var(--rounded-20);
+  -webkit-border-radius: var(--rounded-20);
+  -moz-border-radius: var(--rounded-20);
+  -ms-border-radius: var(--rounded-20);
+  -o-border-radius: var(--rounded-20);
+}

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useRouteMatch } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { requestAll } from "../../redux/actions";
+import CardsHeader from "../CardsHeader";
 import Card from "../Card";
 import Pagination from "../Pagination";
 import s from "./Cards.module.css";
@@ -17,6 +18,7 @@ export default function Cards() {
 
   return (
     <div className={s.container}>
+      <CardsHeader />
       {paginatedBreeds.map((breed) => (
         <Card {...{ breed, path }} key={breed.id} />
       ))}
