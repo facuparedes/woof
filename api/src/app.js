@@ -22,7 +22,7 @@ app
     // Error catching endware.
     const { status = 500, message: error = err } = err;
 
-    console.error(err);
+    // console.error(err);
     res.status(status).json({ error });
   });
 

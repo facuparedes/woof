@@ -16,10 +16,6 @@ export default function BreedDetails() {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  useEffect(() => dispatch(requestBreedByID(id)), [id]);
-  useEffect(() => breed && !breed.randomBreeds && dispatch(requestRandomBreeds()), [breed]);
-  useEffect(() => breed && breed.randomBreeds && setSliderPosition(0), [breed?.randomBreeds]);
-
   const handleNextBackButtonClick = (goTo) => {
     const element = sliderRef.current;
     const cardGap = parseInt(getComputedStyle(element).gridColumnGap.replace(/[^\d.]/g, "")) / breed.randomBreeds.length || 0;
@@ -30,6 +26,10 @@ export default function BreedDetails() {
 
     setSliderPosition((prevSliderPosition) => (goTo === "next" ? ++prevSliderPosition : --prevSliderPosition));
   };
+
+  useEffect(() => dispatch(requestBreedByID(id)), [dispatch, id]);
+  useEffect(() => breed && !breed.randomBreeds && dispatch(requestRandomBreeds()), [dispatch, breed]);
+  useEffect(() => breed && breed.randomBreeds && setSliderPosition(0), [breed, breed?.randomBreeds]);
 
   return (
     <section className={s.container}>

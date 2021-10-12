@@ -1,0 +1,21 @@
+.container {
+  height: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: none;
+  background-color: rgba(var(--colors-text), 0.05);
+  border-radius: calc(var(--rounded-20) - 2px);
+  -webkit-border-radius: calc(var(--rounded-20) - 2px);
+  -moz-border-radius: calc(var(--rounded-20) - 2px);
+  -ms-border-radius: calc(var(--rounded-20) - 2px);
+  -o-border-radius: calc(var(--rounded-20) - 2px);
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+
+.container::placeholder {
+  color: rgba(var(--colors-text), 0.3);
+}

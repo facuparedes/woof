@@ -14,7 +14,7 @@ export const FILTER_BREEDS_BY_ID = "FILTER_BREEDS_BY_ID";
 export const RESET_BREEDS_FILTER_BY_ID = "RESET_BREEDS_FILTER_BY_ID";
 export const SORT_BREEDS = "SORT_BREEDS";
 
-export const requestAll = () => async (dispatch) => Promise.all([requestBreeds()(dispatch), requestTemperaments()(dispatch)]);
+export const requestAll = () => async (dispatch, getState) => Promise.all([requestBreeds()(dispatch), !getState().temperaments.length && requestTemperaments()(dispatch)]);
 
 export const requestBreeds = () => async (dispatch) => axios.get(`${API_URL}/breeds`).then((res) => dispatch(addBreeds(res.data)));
 
@@ -23,6 +23,8 @@ export const requestBreedByID = (id) => async (dispatch) => dispatch(resetBreedD
 export const requestRandomBreeds = () => async (dispatch) => axios.get(`${API_URL}/breeds/randoms`).then((res) => dispatch(addRandomBreedsToDetails(res.data)));
 
 export const requestTemperaments = () => async (dispatch) => axios.get(`${API_URL}/temperaments`).then((res) => dispatch(addTemperaments(res.data)));
+
+export const createBreed = (breed) => async () => axios.post(`${API_URL}/breeds`, breed);
 
 export const addBreeds = (breeds) => ({
   type: ADD_BREEDS,

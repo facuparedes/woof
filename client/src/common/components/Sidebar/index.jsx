@@ -12,14 +12,6 @@ export default function Sidebar() {
   const { data: breeds, __activeFilters } = breedsData;
   const { breeds: activeBreedsFilter } = __activeFilters;
 
-  useEffect(() => _isMounted.current && dispatch(filterBreedsByTemperament(Object.values(checkedValues.temperaments))), [checkedValues.temperaments, dispatch]);
-  useEffect(() => _isMounted.current && dispatch(filterBreedsByBreed(Object.values(checkedValues.breeds))), [checkedValues.breeds, dispatch]);
-
-  useEffect(() => {
-    _isMounted.current = true;
-    return () => (_isMounted.current = false);
-  }, []);
-
   const handleChecked = (id, name, toUpdateKey) => {
     setCheckedValues((prevCheckedValues) => {
       const { temperaments, breeds } = prevCheckedValues;
@@ -30,6 +22,13 @@ export default function Sidebar() {
       return newCheckedValues;
     });
   };
+
+  useEffect(() => _isMounted.current && dispatch(filterBreedsByTemperament(Object.values(checkedValues.temperaments))), [checkedValues.temperaments, dispatch]);
+  useEffect(() => _isMounted.current && dispatch(filterBreedsByBreed(Object.values(checkedValues.breeds))), [checkedValues.breeds, dispatch]);
+  useEffect(() => {
+    _isMounted.current = true;
+    return () => (_isMounted.current = false);
+  }, []);
 
   return (
     <aside className={s.container}>

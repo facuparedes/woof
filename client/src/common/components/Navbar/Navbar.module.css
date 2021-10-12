@@ -10,3 +10,35 @@
 .container__logo {
   height: 100%;
 }
+
+.container__rightSide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+}
+
+.container__rightSide__links {
+  display: flex;
+  column-gap: 10px;
+  height: 100%;
+  align-items: center;
+}
+
+.container__rightSide__links > a {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  color: rgba(var(--colors-text), 0.6);
+  font-weight: 500;
+  transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  -moz-transition: color 0.2s;
+  -ms-transition: color 0.2s;
+  -o-transition: color 0.2s;
+}
+
+.container__rightSide__links > a:hover {
+  color: rgba(var(--colors-text), 1);
+}

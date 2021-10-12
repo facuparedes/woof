@@ -66,6 +66,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
+  overflow-y: auto;
+  max-height: 180px;
 }
 
 .container__card__details__randomBreeds {
@@ -86,7 +88,7 @@
 
 .container__card__details__randomBreeds__slider {
   display: flex;
-  height: 400px;
+  height: 350px;
   column-gap: 20px;
   margin: var(--m-slider);
   transition: transform 0.3s;

@@ -10,8 +10,6 @@ export default function Pagination({ pagesQuantity, currentPage }) {
   const maxButtonsPerPage = 9;
   const buttons = [...new Array(Math.min(pagesQuantity, maxButtonsPerPage))].map((_, i) => i + 1 + paginationOffset);
 
-  useEffect(() => setPaginationOffset(0), [pagesQuantity]);
-
   const __handlePaginationChange = (toPage) => {
     if (toPage === currentPage || toPage < 1 || toPage > pagesQuantity) return;
     if (toPage === 1) setPaginationOffset(0);
@@ -21,6 +19,8 @@ export default function Pagination({ pagesQuantity, currentPage }) {
 
     dispatch(setPaginationIndex(toPage));
   };
+
+  useEffect(() => setPaginationOffset(0), [pagesQuantity]);
 
   return (
     <div className={s.container}>

@@ -1,0 +1,118 @@
+.container {
+  width: 100%;
+  max-height: calc(100vh - var(--h-navbar));
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(var(--colors-text), 0.05);
+  position: relative;
+}
+
+.container__card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--colors-secondary);
+  row-gap: 20px;
+  padding: 40px;
+  margin: var(--ml-container) 0;
+  border-radius: calc(var(--rounded-20) / 2);
+  -webkit-border-radius: calc(var(--rounded-20) / 2);
+  -moz-border-radius: calc(var(--rounded-20) / 2);
+  -ms-border-radius: calc(var(--rounded-20) / 2);
+  -o-border-radius: calc(var(--rounded-20) / 2);
+  overflow: hidden;
+}
+
+.container__card > h1 {
+  font-size: calc(var(--text-90) / 3);
+  margin-bottom: 20px;
+}
+
+.container__card__form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+}
+
+.container__card__form > button {
+  align-self: flex-end;
+  display: inline-block;
+  width: fit-content;
+  padding: var(--px-20) var(--px-40);
+  font-size: 1.1rem;
+  font-family: var(--font-inter);
+  color: var(--colors-secondary);
+  background-color: rgb(var(--colors-primary));
+  cursor: pointer;
+  border: none;
+  border-radius: var(--rounded-20);
+  -webkit-border-radius: var(--rounded-20);
+  -moz-border-radius: var(--rounded-20);
+  -ms-border-radius: var(--rounded-20);
+  -o-border-radius: var(--rounded-20);
+  transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  -ms-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+}
+
+.container__card__form > button:hover {
+  background-color: rgba(var(--colors-primary), 0.8);
+}
+
+.container__card__form__container {
+  display: flex;
+  column-gap: 40px;
+}
+
+.container__card__form__container__leftSide {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  height: fit-content;
+}
+
+.container__card__form__container__leftSide input {
+  border: 1px solid transparent;
+}
+
+.container__card__form__container__leftSide > div {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.container__card__form__container__leftSide > div > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.container__card__form__container__rightSide {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.container__card__form__container__rightSide__temperaments {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 4px;
+  overflow-y: scroll;
+}
+
+.container__card__form__container__rightSide__temperaments > label > input {
+  border: 1px solid transparent;
+}
+
+.inputError {
+  border: 1px solid rgba(255, 0, 0, 0.8) !important;
+}
+
+.textError {
+  color: rgba(255, 0, 0, 0.8) !important;
+}

@@ -1,6 +1,32 @@
-.input::-webkit-search-cancel-button {
-  -webkit-appearance: none;
-  appearance: none;
+.container {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  border-radius: calc(var(--rounded-20) / 2);
+  -webkit-border-radius: calc(var(--rounded-20) / 2);
+  -moz-border-radius: calc(var(--rounded-20) / 2);
+  -ms-border-radius: calc(var(--rounded-20) / 2);
+  -o-border-radius: calc(var(--rounded-20) / 2);
+}
+
+.container > span {
+  display: block;
+  color: var(--colors-secondary);
+}
+
+.container > span:first-child {
+  font-weight: bold;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container > span:first-child > button {
   height: 18px;
   width: 18px;
   cursor: pointer;
@@ -9,9 +35,18 @@
   background-repeat: no-repeat;
   background-size: 8px 8px;
   background-position: center;
+  border: none;
   border-radius: var(--rounded-20);
   -webkit-border-radius: var(--rounded-20);
   -moz-border-radius: var(--rounded-20);
   -ms-border-radius: var(--rounded-20);
   -o-border-radius: var(--rounded-20);
+}
+
+.container__success {
+  background-color: var(--colors-success);
+}
+
+.container__error {
+  background-color: var(--colors-error);
 }

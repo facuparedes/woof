@@ -1,3 +1,4 @@
+/* eslint-disable */
 import "./common/config";
 import "./global.css";
 import reportWebVitals from "./reportWebVitals";
@@ -8,11 +9,9 @@ import store from "./common/redux/store";
 import App from "./pages/App";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider {...{ store }}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider {...{ store }}>
+    <App />
+  </Provider>,
   document.getElementById("root")
 );
 
