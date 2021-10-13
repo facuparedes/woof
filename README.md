@@ -33,6 +33,10 @@ Creating a new breed
 
 ## Getting started
 
+### Database and .env files setup
+
+Firstly, you must create a postgresql database. Then go `api` folder and `client` folder, rename `.example.env` file to `.env`, and then fill in the database credentials.
+
 ### Running locally in development mode
 
 To get started, just clone the repository and run npm install && npm run dev:
