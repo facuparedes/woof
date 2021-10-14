@@ -38,7 +38,7 @@ Firstly, you must create a postgresql database. Then go `api` folder and `client
 
 ### Running locally in development mode
 
-To get started, just clone the repository and run:
+To get started, just clone the repository and run `npm install` and `npm start`.:
 
 ```sh
 git clone https://github.com/facuparedes/woof.git

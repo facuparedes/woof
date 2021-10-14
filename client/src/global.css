@@ -17,13 +17,13 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: rgba(var(--colors-text), 0.4);
+  border: 2px solid transparent;
   border-radius: 1000px;
   -webkit-border-radius: 1000px;
   -moz-border-radius: 1000px;
   -ms-border-radius: 1000px;
   -o-border-radius: 1000px;
   background-clip: content-box;
-  border: 2px solid transparent;
 }
 
 a:focus,
