@@ -39,7 +39,7 @@ Firstly, you must create a postgresql database. Then go `api` folder and `client
 
 ### Running locally in development mode
 
-To get started, just clone the repository and run npm install && npm run dev:
+To get started, just clone the repository and run:
 
 ```sh
 git clone https://github.com/facuparedes/woof.git
@@ -57,7 +57,7 @@ Note: If you are running on Windows and you have issues with `fsevents`, run ins
 
 ### Building and deploying in production
 
-If you wanted to run this site in production, you should install modules then build the site with npm run build and run it with npm start:
+If you wanted to run this site in production, you should install modules then build the site with npm run build and run it with `serve`:
 
 #### Linux & MacOS
 
