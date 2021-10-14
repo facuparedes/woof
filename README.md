@@ -1,7 +1,6 @@
 # woof
 
-Bootcamp challenge.
-A [TheDogApi](https://thedogapi.com/) wrapper, with custom API and Client.
+A Bootcamp challenge. [TheDogApi](https://thedogapi.com/) wrapper, with custom API and Client.
 
 This project is just an <ins>initial release</ins>, so can be updated in a future with new features.
 
