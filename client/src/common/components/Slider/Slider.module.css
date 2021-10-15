@@ -1,0 +1,93 @@
+.container {
+  position: relative;
+  margin-top: auto;
+  overflow: hidden;
+  margin-left: calc(var(--m-slider) * -1);
+  margin-right: calc(var(--m-slider) * -1);
+}
+
+.container__title {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-left: var(--m-slider);
+}
+
+.container__slider {
+  display: flex;
+  height: 350px;
+  column-gap: 20px;
+  margin: var(--m-slider);
+  transition: transform 0.3s;
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -ms-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+}
+
+.container__nextBackButton {
+  position: absolute;
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  border: none;
+  background-color: var(--colors-secondary);
+  box-shadow: 0px 2px 4px rgba(var(--colors-text), 0.6);
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: box-shadow 0.3s;
+  -webkit-transition: box-shadow 0.3s;
+  -moz-transition: box-shadow 0.3s;
+  -ms-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+}
+
+.container__nextBackButton:hover {
+  box-shadow: 0px 2px 8px 1px rgba(var(--colors-text), 0.6);
+}
+
+.container__nextBackButton svg {
+  fill: rgb(var(--colors-primary));
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+.container__backButton {
+  left: 1rem;
+}
+
+.container__nextButton {
+  right: 1rem;
+}
+
+.container__slider__card {
+  min-height: unset !important;
+  height: 100%;
+  box-shadow: 0px 0px 2px rgba(var(--colors-text), 0.2);
+  border-radius: calc(var(--rounded-20) / 4);
+  -webkit-border-radius: calc(var(--rounded-20) / 4);
+  -moz-border-radius: calc(var(--rounded-20) / 4);
+  -ms-border-radius: calc(var(--rounded-20) / 4);
+  -o-border-radius: calc(var(--rounded-20) / 4);
+}
+
+.container__slider__card:hover {
+  transform: none;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+}
+
+.container__slider__card > div:first-child {
+  height: 60%;
+}
