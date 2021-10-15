@@ -1,10 +1,11 @@
 # woof
 
 A Bootcamp challenge. [TheDogApi](https://thedogapi.com/) wrapper, with custom API and Client.
+We just had 2 weeks to finish it and we couldn't use any technologies that have not been mentioned.
 
 This project is just an <ins>initial release</ins>, so can be updated in a future with new features.
 
-Client is a [React](https://reactjs.org/) app, with a [React Router](https://reacttraining.com/react-router/web/guides/quick-start) and [Redux](https://redux.js.org/).
+Client is a [React](https://reactjs.org/) app, with [React Router](https://reacttraining.com/react-router/web/guides/quick-start) and [Redux](https://redux.js.org/).
 API uses [Express](https://expressjs.com/), [Sequelize](https://sequelize.org/) and [PostgreSQL](https://www.postgresql.org/) as DB.
 
 ### Screenshots
